@@ -1,4 +1,10 @@
+import { TypeModel } from "./type-model";
+
 export interface TransactionModel {
-  amount: number;
-  description: string;
+    id:number;
+    date: Date;
+    amount: number;
+    reason: string;
+    type_id: number;
+    type?: TypeModel; //No lleva [] porque es belongsTo
 }
