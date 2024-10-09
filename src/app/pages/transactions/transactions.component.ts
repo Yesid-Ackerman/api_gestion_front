@@ -1,30 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  FormsModule,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
-import { TransactionModel } from './shared/models/transaction-model';
-import { TransactionService } from '@shared/services/transaction.service';
-import { forkJoin } from 'rxjs';
-import { TypeService } from '@shared/services/type.service';
-import { TypeModel } from '@shared/models/type-model';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { createTransactionDTO } from '@shared/dto/create-transaction-dto';
 import { updateTransactionDTO } from '@shared/dto/update-transaction-dto';
+import { TransactionModel } from '@shared/models/transaction-model';
+import { TypeModel } from '@shared/models/type-model';
+import { TransactionService } from '@shared/services/transaction.service';
+import { TypeService } from '@shared/services/type.service';
+import { forkJoin } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-transactions',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule, ReactiveFormsModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  templateUrl: './transactions.component.html',
+  styleUrl: './transactions.component.css'
 })
-export class AppComponent implements OnInit {
+export class TransactionsComponent implements OnInit {
   private formbuilder = inject(FormBuilder);
   private transactionService = inject(TransactionService);
 

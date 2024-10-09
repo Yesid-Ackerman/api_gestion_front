@@ -13,7 +13,7 @@ export class TypeService {
 
   private http = inject(HttpClient)
 
-  endpoint:string = `${API_URL}/types`;
+  private endpoint:string = `${API_URL}/types`;
 
   constructor() {}
   getAll(){
