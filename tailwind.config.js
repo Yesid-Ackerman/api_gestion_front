@@ -10,7 +10,7 @@ module.exports = {
         'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
       },
       animation: {
-        'slow-spin': 'spin 10s linear infinite', // Ajusta la duración a 5 segundos
+        'slow-spin': 'spin 5s linear infinite', // Ajusta la duración a 5 segundos
       },
       keyframes: {
         spin: {
